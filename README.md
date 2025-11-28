@@ -1,94 +1,264 @@
-<header>
-
-<!--
-  <<< Author notes: Course header >>>
-  Read <https://skills.github.com/quickstart> for more information about how to build courses using this template.
-  Include a 1280×640 image, course name in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Next to "About", add description & tags; disable releases, packages, & environments.
-  Add your open source license, GitHub uses the MIT license.
--->
-
-# Code with GitHub Copilot
-
-_GitHub Copilot can help you code by offering autocomplete-style suggestions right in VS Code and Codespaces._
-
-</header>
-
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
-
-## Step 1: Leverage Codespaces with VS Code for Copilot
-
-_Welcome to "Develop With AI Powered Code Suggestions Using GitHub Copilot and VS Code"! :wave:_
-
-GitHub Copilot is an AI pair programmer that helps you write code faster and with less work. It draws context from comments and code to suggest individual lines and whole functions instantly. GitHub Copilot is powered by OpenAI Codex, a generative pretrained language model created by OpenAI.
-
-**Copilot works with many code editors including VS Code, Visual Studio, JetBrains IDE, and Neovim.**
-
-Additionally, GitHub Copilot is trained on all languages that appear in public repositories. For each language, the quality of suggestions you receive may depend on the volume and diversity of training data for that language.
-
-Using Copilot inside a Codespace shows just how easy it is to get up and running with GitHub's suite of [Collaborative Coding](https://github.com/features#features-collaboration) tools.
-
-> **Note**
-> This skills exercise will focus on leveraging GitHub Codespace. It is recommended that you complete the GitHub skill, [Codespaces](https://github.com/skills/code-with-codespaces), before moving forward with this exercise.
-
-### :keyboard: Activity: Enable Copilot inside a Codespace
-
-**We recommend opening another browser tab to work through the following activities so you can keep these instructions open for reference.**
-
-Before you open up a codespace on a repository, you can create a development container and define specific extensions or configurations that will be used or installed in your codespace. Let's create this development container and add copilot to the list of extensions.
-
-1. Navigating back to your **Code** tab of your repository, click the **Add file** drop-down button, and then click `Create new file`.
-1. Type or paste the following in the empty text field prompt to name your file.
-   ```
-   .devcontainer/devcontainer.json
-   ```
-1. In the body of the new **.devcontainer/devcontainer.json** file, add the following content:
-   ```
-   {
-       // Name this configuration
-       "name": "Codespace for Skills!",
-       "customizations": {
-           "vscode": {
-               "extensions": [
-                   "GitHub.copilot"
-               ]
-           }
-       }
-   }
-   ```
-1. Select the option to **Commit directly to the `main` branch**, and then click the **Commit new file** button.
-1. Navigate back to the home page of your repository by clicking the **Code** tab located at the top left of the screen.
-1. Click the **Code** button located in the middle of the page.
-1. Click the **Codespaces** tab on the box that pops up.
-1. Click the **Create codespace on main** button.
-
-   **Wait about 2 minutes for the codespace to spin itself up.**
-
-1. Verify your codespace is running. The browser should contain a VS Code web-based editor and a terminal should be present such as the below:
-   ![Screen Shot 2023-03-09 at 9 09 07 AM](https://user-images.githubusercontent.com/26442605/224102962-d0222578-3f10-4566-856d-8d59f28fcf2e.png)
-1. The `copilot` extension should show up in the VS Code extension list. Click the extensions sidebar tab. You should see the following:
-   ![Screen Shot 2023-03-09 at 9 04 13 AM](https://user-images.githubusercontent.com/26442605/224102514-7d6d2f51-f435-401d-a529-7bae3ae3e511.png)
-
-**Wait about 60 seconds then refresh your repository landing page for the next step.**
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/code-with-copilot) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morocco Adventures | Book Your Dream Tour</title>
+    <link href="https:                                                                                               
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      /* --- Base CSS & Morocco-Inspired Palette --- */
+      :root {
+        --primary-color: #008080; /* Teal/Moroccan Green */
+        --accent-color: #B8860B; /* Gold/Brass accent */
+        --secondary-color: #3d3d3d;
+        --light-bg: #f7f7f7;
+        --white: #fff;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      body {
+        line-height: 1.6;
+        background-color: var(--light-bg);
+        color: var(--secondary-color);
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+      /* --- Global Styles --- */
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+      }
+      .section-title {
+        text-align: center;
+        margin-bottom: 4rem;
+        color: var(--secondary-color);
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+      .btn {
+        display: inline-block;
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 15px 35px;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: none;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: var(--accent-color);
+      }
+      /* --- Navbar (Same as before) --- */
+      header {
+        background: var(--white);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+      nav ul {
+        display: flex;
+      }
+      nav ul li {
+        margin-left: 25px;
+      }
+      nav ul li a {
+        font-weight: 500;
+        transition: 0.3s;
+      }
+      nav ul li a:hover {
+        color: var(--accent-color);
+      }
+      /* --- Hero Section (Same as before) --- */
+      .hero {
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1549791404-3b2d1c6762fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--white);
+        margin-top: 60px;
+      }
+      .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      /* --- Destinations Section (Same as before) --- */
+      .destinations {
+        padding: 5rem 0 3rem;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      .card {
+        background: var(--white);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      }
+      .card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+      .card-content {
+        padding: 1.5rem;
+      }
+      .card-content h3 {
+        margin-bottom: 10px;
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+      .card-content p {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 15px;
+      }
+      .card-content .btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+      }
+      /* --- NEW: Testimonials Section --- */
+      .testimonials {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 5rem 0;
+      }
+      .testimonial-title {
+        color: var(--white);
+      }
+      .testimonial-grid {
+        display: flex;
+        gap: 30px;
+        overflow-x: auto; /* Enable scrolling on smaller screens */
+        padding-bottom: 20px;
+      }
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-left: 5px solid var(--accent-color);
+        padding: 25px;
+        border-radius: 8px;
+        min-width: 300px;
+        flex: 1; /* Ensures cards are flexible */
+      }
+      .testimonial-card i {
+        color: var(--accent-color);
+        margin-bottom: 10px;
+      }
+      .testimonial-card p {
+        font-style: italic;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+      }
+      .client-name {
+        font-weight: 600;
+        text-align: right;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 10px;
+      }
+      /* --- NEW: Booking Form Section --- */
+      .booking-section {
+        padding: 5rem 0;
+        background-color: var(--white);
+      }
+      .booking-form {
+        max-width: 600px;
+        margin: auto;
+        background: var(--light-bg);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      .form-group input, .form-group select, .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+      .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+        border-color: var(--primary-color);
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <i class="fas fa-mountain"></i> Morocco Adventures
+          </div>
+          <ul>
+            <li><a href="                
+            <li><a href="#destinations">Tours</a></li>
+            <li><a href="                               
+            <li><a href="#booking">Book Now</a></li>
+            <li><a href="                          
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <h1>Experience the Magic of Morocco</h1>
+        <p>From the bustling souks of Marrakech to the silent, golden dunes of the Sahara, your adventure starts here.</p>
+        <a href="#booking" class="btn">Book Your Tour</a>
+      </div>
+    </section>
+    <section id="destinations" class="destinations container">
+      <h2 class="section-title">Must-Visit Moroccan Destinations</h2>
+      <
